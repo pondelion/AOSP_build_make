@@ -391,4 +391,8 @@ PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
 PRODUCT_COPY_FILES += $(call add-to-product-copy-files-if-exists,\
     frameworks/base/config/dirty-image-objects:system/etc/dirty-image-objects)
 
+PRODUCT_COPY_FILES += \
+    credentials/aws_ios_priv_key.pem.key:system/etc/credentials/aws_ios_priv_key.pem.key \
+    credentials/aws_iot_cert.pem.crt:system/etc/credentials/aws_iot_cert.pem.crt
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
